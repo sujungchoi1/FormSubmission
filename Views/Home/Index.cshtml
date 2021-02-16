@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+@model User
+
+<body>
+    <div class="wrapper">
+        <h1>Enter your information</h1>
+        <form asp-action="Create" asp-controller="Home" method="post">
+            <div class="formGroup">
+                <div class="formLabel">
+                        <span asp-validation-for="FirstName"></span>
+                    <div class="label">
+                        <label asp-for="FirstName"></label>
+                    </div>
+                        <span asp-validation-for="LastName"></span>
+                    <div class="label">
+                        <label asp-for="LastName"></label>
+                    </div>
+                        <span asp-validation-for="Age"></span>
+                    <div class="label">
+                        <label asp-for="Age"></label>
+                    </div>
+                        <span asp-validation-for="Email"></span>
+                    <div class="label">
+                        <label asp-for="Email"></label>
+                    </div>
+                        <span asp-validation-for="Password"></span>
+                    <div class="label">
+                        <label asp-for="Password"></label>
+                    </div>
+                    <span asp-validation-for="Graduation"></span>
+                    <div class="label">
+                        <label asp-for="Graduation"></label>
+                    </div>
+                </div>
+
+                <div class="formInput">
+                        <input asp-for="FirstName">
+                        <input asp-for="LastName">
+                        <input asp-for="Age">
+                        <input asp-for="Email">
+                        <input asp-for="Password">
+                        <input asp-for="Graduation">
+
+                </div>
+            </div>
+                <div class="submitButton">
+                    <input value="Submit" type="submit">
+                </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
